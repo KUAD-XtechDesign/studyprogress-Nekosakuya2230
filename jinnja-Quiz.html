@@ -1,0 +1,66 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="viewport" content="width=device-width"/>
+
+<title>神社物知りクイズ</title>
+<link rel="apple-touch-icon" href="./assees/CSS/q4js-icon.png"/>
+<meta property="og:image" content="./assees/CSS/q4js-ss.png"/>
+<link rel="stylesheet" type="text/css" href="./assees/CSS/q4js.css"/>
+<script src=./assees/CSS/fukuno.js></script>
+<script src=./assees/CSS/q4.js></script>
+
+<script>"use strict"
+window.onload = function() {
+	// タイトル
+	var title = "神社物知りクイズ"
+	// 問題文、正解、誤答3つ以上いくつでも
+	var quiz = [
+		[ "伊勢神宮の正式名称は次のうちどれ？", "神宮", "国宮", "大宮", "聖宮", "国社" ],
+		[ "日本で最も多い神社は何神社？", "八幡信仰", "伊勢信仰", "稲荷信仰", "春日信仰", "祇園信仰", "天神信仰" ],
+		[ "伏見稲荷大社に祀られている神様はどの神？", "宇迦之御魂神", "大山祇神", "高淤加美神", "加茂分雷神", "塩土老翁" ],
+		[ "大国主命の神使は何？", "鼠", "鹿", "牛", "兎", "狐" ],
+		[ "日本で最も多い鳥居の種類は何？", "明神鳥居", "神明鳥居", "稲荷鳥居", "山王鳥居", "八幡鳥居", "両部鳥居" ],
+		[ "素戔嗚尊の妻はどの神？", "櫛稲田姫命", "木花咲耶姫命", "磐長姫命", "須勢理姫命", "豊玉姫命" ],
+		[ "日本で最も神社が多い都道府県はどこ？", "新潟県", "兵庫県", "京都府", "奈良県", "福岡県" ],
+		[ "では逆に、最も神社が少ない都道府県はどこ？", "沖縄県", "北海道", "東京都", "大阪府", "佐賀県" ],
+		[ "日本最古と言われている神社は次のうちどれ？", "大神神社", "伊勢神宮", "八坂神社", "熱田神宮", "厳島神社", "伏見稲荷大社" ],
+		[ "天照大神、素戔嗚尊、月読命、三人合わせてなんと呼ぶ？", "三貴子", "三大神", "三貴柱", "三大聖", "三皇神" ],
+	]
+	// クリアした時
+	var callback = function() {
+		// 即、ジャンプしたい場合はこちら
+//		location = "https://fukuno.jig.jp/2355"
+
+		// ダイアログ形式で尋ねたい場合はこちら
+		if (confirm("ホームに戻りますか？")) {
+			location = "./index.html"
+	  } else if (confirm("もういちど？")) {
+			location.reload()
+		}
+	}
+	// クイズスタート
+	startQuiz(title, quiz, callback)
+}
+</script>
+</head><body>
+
+<div id=head class=theme>第1問</div>
+<div id=main>
+	<!--<div id=ind class=indcorrect></div>-->
+	<div id=ind class=indcorrect>正解</div>
+	<!--<div id=ind class=indincorrect>不正解</div>-->
+	<div id=q>魁のよみは？</div>
+	<div id=ans>
+		<div id=ans1>さきかけ</div>
+		<div class=correct id=ans2>さきがけ</div>
+		<div id=ans3>ささき</div>
+		<div class=disable id=ans4>がけがけ</div>
+	</div>
+</div>
+
+<div id=credit class=theme>
+	<a href=https://fukuno.jig.jp/2355>4択クイズアプリ SCP-2230</a>
+</div>
+
+</body></html>
