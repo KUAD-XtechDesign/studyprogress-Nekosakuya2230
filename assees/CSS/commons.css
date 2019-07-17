@@ -20,3 +20,7 @@ a{
 li{
   list-style-position: inside;
 }
+
+div {
+  text-align:center;
+}
